@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blackjack-Game</title>
+</head>
+
+<body>
+    <div class="container border my-4">
+        <h2 class="text-center border-bottom my-4" style="font-family: 'Dancing Script', cursive;">Blackjack <span id="balance"></span>
+        </h2>
+        <p style="font-family: 'Dancing Script', cursive;font-size: 25px;" class="text-center"><span
+                id="blackjack-result" class="">Let's play</span></p>
+        <div class="back_img">
+        <div class=" row row-cols-2 text-center">
+            <div id="your-box" class="col-6 border" style="height: 300px; font-size: 25px;">You: <span
+                    id="your-blackjack-result">0</span><br></div>
+            <div id="dealer-box" class="col-6 border" style="height: 300px; font-size: 25px">Bot: <span
+                    id="dealer-blackjack-result">0</span><br></div>
+        </div>
+        <div class="row mb-2 mt-2" style="margin-left: 0px; justify-content: space-around;">
+
+            <div id="blackjack-hit-button" role="button"class="col-3 btn btn-primary mr-2 border-right">Hit!</div>
+            <div id="blackjack-stand-button" role="button" class="col-3 btn btn-danger mr-2 border-right">Stand!</div>
+            <div id="blackjack-deal-button" role="button" class="col-3 btn btn-success mr-2 ">Deal!</div>
+        </div>
+        <table  style="color: white;" class="table table-bordered">
+            <thead class="text-center">
+              <tr>
+                 <!-- <th scope="col"></th>  -->
+                <th scope="col">Won</th>
+                <th scope="col">Draw</th>
+                <th scope="col">Lost</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <!-- <th scope="row "></th> -->
+                <td><span id="wins">0</span></td>
+                <td><span id="draw">0</span></td>
+                <td><span id="lost">0</span></td>
+              </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>   
+    <script src="scripts\app.js"></script>
+</body>
+</html>
