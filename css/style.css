@@ -1,6 +1,51 @@
-.back_img{
-    background-image: url("table.jpg");
-    background-repeat: no-repeat;
-      background-size: 1200px 600px;
-      color: #ffffff;
+body.dark-bg {
+  background-color: #111;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.bet-input {
+  width: 120px;
+  display: inline-block;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.player-box {
+  background-color: #1c1c1c;
+  padding: 20px;
+  width: 180px;
+  min-height: 250px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  text-align: center;
+}
+
+.player-label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.score {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.result-message {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cards-container img {
+  width: 55px;
+  border-radius: 5px;
 }

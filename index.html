@@ -2,56 +2,67 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Blackjack-Game</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Blackjack-Game</title>
 </head>
 
-<body>
-    <div class="container border my-4">
-        <h2 class="text-center border-bottom my-4" style="font-family: 'Dancing Script', cursive;">Blackjack <span id="balance"></span>
-        </h2>
-        <p style="font-family: 'Dancing Script', cursive;font-size: 25px;" class="text-center"><span
-                id="blackjack-result" class="">Let's play</span></p>
-        <div class="back_img">
-        <div class=" row row-cols-2 text-center">
-            <div id="your-box" class="col-6 border" style="height: 300px; font-size: 25px;">You: <span
-                    id="your-blackjack-result">0</span><br></div>
-            <div id="dealer-box" class="col-6 border" style="height: 300px; font-size: 25px">Bot: <span
-                    id="dealer-blackjack-result">0</span><br></div>
-        </div>
-        <div class="row mb-2 mt-2" style="margin-left: 0px; justify-content: space-around;">
+<body class="dark-bg text-light">
+  <div class="container py-4">
+    <h2 class="text-center mb-3 display-4">Blackjack</h2>
+    <div id="balance" class="text-center mb-2 small-text">Funds: $1000; Bet Amount: $0</div>
 
-            <div id="blackjack-hit-button" role="button"class="col-3 btn btn-primary mr-2 border-right">Hit!</div>
-            <div id="blackjack-stand-button" role="button" class="col-3 btn btn-danger mr-2 border-right">Stand!</div>
-            <div id="blackjack-deal-button" role="button" class="col-3 btn btn-success mr-2 ">Deal!</div>
-        </div>
-        <table  style="color: white;" class="table table-bordered">
-            <thead class="text-center">
-              <tr>
-                 <!-- <th scope="col"></th>  -->
-                <th scope="col">Won</th>
-                <th scope="col">Draw</th>
-                <th scope="col">Lost</th>
-              </tr>
-            </thead>
-            <tbody class="text-center">
-              <tr>
-                <!-- <th scope="row "></th> -->
-                <td><span id="wins">0</span></td>
-                <td><span id="draw">0</span></td>
-                <td><span id="lost">0</span></td>
-              </tr>
-            </tbody>
-        </table>
-        </div>
-    </div>   
-    <script src="scripts\app.js"></script>
+    <div class="betting-ui text-center mb-4">
+      <input type="number" id="bet-input" placeholder="Enter your bet" class="form-control d-inline bet-input">
+      <button id="place-bet-button" class="btn btn-warning ml-2">Place Bet</button>
+      <div id="bet-warning" class="text-danger mt-2"></div>
+    </div>
+
+    <div class="game-board d-flex justify-content-around align-items-start mb-4">
+      <div id="your-box" class="player-box">
+        <div class="player-label">You</div>
+        <div id="your-blackjack-result" class="score">0</div>
+        <div id="your-cards" class="cards-container mt-2"></div>
+      </div>
+      <div id="dealer-box" class="player-box">
+        <div class="player-label">Dealer</div>
+        <div id="dealer-blackjack-result" class="score">0</div>
+        <div id="dealer-cards" class="cards-container mt-2"></div>
+      </div>
+    </div>
+
+    <div id="blackjack-result" class="text-center result-message">Let's play!</div>
+
+    <div class="controls text-center mt-3">
+      <button id="blackjack-hit-button" class="btn btn-outline-light mx-2">Hit</button>
+      <button id="blackjack-stand-button" class="btn btn-outline-danger mx-2">Stand</button>
+      <button id="blackjack-deal-button" class="btn btn-outline-success mx-2">Deal</button>
+    </div>
+
+    <div class="text-center mt-4">
+      <table class="table table-dark table-bordered w-50 mx-auto">
+        <thead>
+          <tr><th>Wins</th><th>Draws</th><th>Losses</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="wins">0</td>
+            <td id="draw">0</td>
+            <td id="lost">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="scripts/app.js"></script>
 </body>
+
+
 </html>
